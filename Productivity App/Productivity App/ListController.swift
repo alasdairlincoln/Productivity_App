@@ -8,30 +8,19 @@
 
 import UIKit
 
-/*
-class TableViewHelper {
-    
-    class func message(message: String, viewController:UITableViewController) {
-        let messageLabel = UILabel()
-        messageLabel.text = message
-        messageLabel.textColor = UIColor.black
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-        
-        viewController.tableView.backgroundView = messageLabel;
-        viewController.tableView.separatorStyle = .none;
-    }
-    
-}
-*/
-
 class ListController: UITableViewController {
     
     var tasks:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.tasks.isEmpty {
+            
+        } else {
+            
+        }
+        
         let savedItems = UserDefaults.standard
         if let loadedItems:[String] = savedItems.object(forKey: "items") as! [String]? {
             self.tasks = loadedItems
@@ -80,19 +69,10 @@ class ListController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        /*
-         https://stackoverflow.com/questions/15746745/handling-an-empty-uitableview-print-a-friendly-message
-         
-        if (self.tasks.isEmpty){
-            self.tableView.reloadData()
-            TableViewHelper.message(message: "You don't have any tasks yet.", viewController: self)
-            return 0
-        } else {
-            return 1
-        }
-         */
+        
+         //https://stackoverflow.com/questions/15746745/handling-an-empty-uitableview-print-a-friendly-message
+        
         return 1
- 
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
