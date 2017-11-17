@@ -122,7 +122,7 @@ class ListController: UITableViewController {
         
         
         //TO-DO: properly implement this
-        ViewController()
+        //ViewController()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
