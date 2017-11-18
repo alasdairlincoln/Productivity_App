@@ -11,9 +11,10 @@
 		62DD57BC1FA4DF2500CF9A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BA1FA4DF2500CF9A16 /* Main.storyboard */; };
 		62DD57BE1FA4DF2500CF9A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BD1FA4DF2500CF9A16 /* Assets.xcassets */; };
 		62DD57C11FA4DF2500CF9A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BF1FA4DF2500CF9A16 /* LaunchScreen.storyboard */; };
-		62DD57CC1FA4DF2500CF9A16 /* Productivity_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57CB1FA4DF2500CF9A16 /* Productivity_AppTests.swift */; };
-		62DD57D71FA4DF2500CF9A16 /* Productivity_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57D61FA4DF2500CF9A16 /* Productivity_AppUITests.swift */; };
 		62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57E41FA4E2BD00CF9A16 /* ListController.swift */; };
+		D26C9C021FC0ABC200B51496 /* TaskMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C011FC0ABC200B51496 /* TaskMakerTests.swift */; };
+		D26C9C051FC0AC4F00B51496 /* Tasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C031FC0ABCC00B51496 /* Tasker.swift */; };
+		D26C9C061FC0AC5300B51496 /* Tasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C031FC0ABCC00B51496 /* Tasker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +42,12 @@
 		62DD57C01FA4DF2500CF9A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DD57C21FA4DF2500CF9A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD57C71FA4DF2500CF9A16 /* Productivity AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Productivity AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DD57CB1FA4DF2500CF9A16 /* Productivity_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productivity_AppTests.swift; sourceTree = "<group>"; };
 		62DD57CD1FA4DF2500CF9A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD57D21FA4DF2500CF9A16 /* Productivity AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Productivity AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DD57D61FA4DF2500CF9A16 /* Productivity_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productivity_AppUITests.swift; sourceTree = "<group>"; };
-		62DD57D81FA4DF2500CF9A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD57E41FA4E2BD00CF9A16 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		D26C9C001FC0ABC100B51496 /* Productivity AppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Productivity AppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D26C9C011FC0ABC200B51496 /* TaskMakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMakerTests.swift; sourceTree = "<group>"; };
+		D26C9C031FC0ABCC00B51496 /* Tasker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +80,6 @@
 			children = (
 				62DD57B51FA4DF2500CF9A16 /* Productivity App */,
 				62DD57CA1FA4DF2500CF9A16 /* Productivity AppTests */,
-				62DD57D51FA4DF2500CF9A16 /* Productivity AppUITests */,
 				62DD57B41FA4DF2500CF9A16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +103,7 @@
 				62DD57BF1FA4DF2500CF9A16 /* LaunchScreen.storyboard */,
 				62DD57C21FA4DF2500CF9A16 /* Info.plist */,
 				62DD57E41FA4E2BD00CF9A16 /* ListController.swift */,
+				D26C9C031FC0ABCC00B51496 /* Tasker.swift */,
 			);
 			path = "Productivity App";
 			sourceTree = "<group>";
@@ -110,19 +111,11 @@
 		62DD57CA1FA4DF2500CF9A16 /* Productivity AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				62DD57CB1FA4DF2500CF9A16 /* Productivity_AppTests.swift */,
+				D26C9C011FC0ABC200B51496 /* TaskMakerTests.swift */,
 				62DD57CD1FA4DF2500CF9A16 /* Info.plist */,
+				D26C9C001FC0ABC100B51496 /* Productivity AppTests-Bridging-Header.h */,
 			);
 			path = "Productivity AppTests";
-			sourceTree = "<group>";
-		};
-		62DD57D51FA4DF2500CF9A16 /* Productivity AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				62DD57D61FA4DF2500CF9A16 /* Productivity_AppUITests.swift */,
-				62DD57D81FA4DF2500CF9A16 /* Info.plist */,
-			);
-			path = "Productivity AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +190,7 @@
 					};
 					62DD57C61FA4DF2500CF9A16 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 62DD57B21FA4DF2500CF9A16;
 					};
@@ -259,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26C9C061FC0AC5300B51496 /* Tasker.swift in Sources */,
 				62DD57B71FA4DF2500CF9A16 /* AppDelegate.swift in Sources */,
 				62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */,
 			);
@@ -268,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DD57CC1FA4DF2500CF9A16 /* Productivity_AppTests.swift in Sources */,
+				D26C9C021FC0ABC200B51496 /* TaskMakerTests.swift in Sources */,
+				D26C9C051FC0AC4F00B51496 /* Tasker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DD57D71FA4DF2500CF9A16 /* Productivity_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -427,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -446,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -465,11 +462,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				INFOPLIST_FILE = "Productivity AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Productivity AppTests/Productivity AppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Productivity App.app/Productivity App";
@@ -481,11 +482,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				INFOPLIST_FILE = "Productivity AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Productivity AppTests/Productivity AppTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Productivity App.app/Productivity App";
@@ -497,6 +501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				INFOPLIST_FILE = "Productivity AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-AppUITests";
@@ -512,6 +517,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C928Q9FG78;
 				INFOPLIST_FILE = "Productivity AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-AppUITests";
