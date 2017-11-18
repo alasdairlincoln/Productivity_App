@@ -1,18 +1,4 @@
-//
-//  ListController.swift
-//  Productivity App
-//
-//  Created by Alasdair Lincoln on 28/10/2017.
-//  Copyright © 2017 Alasdair Lincoln. All rights reserved.
-//
-
 import UIKit
-
-class BackgroundView: UIView {
-    
-    
-    
-}
 
 class ListController: UITableViewController {
     

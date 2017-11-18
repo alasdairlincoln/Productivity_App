@@ -14,7 +14,6 @@
 		62DD57CC1FA4DF2500CF9A16 /* Productivity_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57CB1FA4DF2500CF9A16 /* Productivity_AppTests.swift */; };
 		62DD57D71FA4DF2500CF9A16 /* Productivity_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57D61FA4DF2500CF9A16 /* Productivity_AppUITests.swift */; };
 		62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57E41FA4E2BD00CF9A16 /* ListController.swift */; };
-		D2EDA14D1FAFCBF4006347AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA14C1FAFCBF4006347AA /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		62DD57D61FA4DF2500CF9A16 /* Productivity_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productivity_AppUITests.swift; sourceTree = "<group>"; };
 		62DD57D81FA4DF2500CF9A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD57E41FA4E2BD00CF9A16 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
-		D2EDA14C1FAFCBF4006347AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				62DD57BF1FA4DF2500CF9A16 /* LaunchScreen.storyboard */,
 				62DD57C21FA4DF2500CF9A16 /* Info.plist */,
 				62DD57E41FA4E2BD00CF9A16 /* ListController.swift */,
-				D2EDA14C1FAFCBF4006347AA /* ViewController.swift */,
 			);
 			path = "Productivity App";
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2EDA14D1FAFCBF4006347AA /* ViewController.swift in Sources */,
 				62DD57B71FA4DF2500CF9A16 /* AppDelegate.swift in Sources */,
 				62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */,
 			);
@@ -431,7 +427,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Productivity App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +446,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Productivity App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alasdairlincoln.Productivity-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
