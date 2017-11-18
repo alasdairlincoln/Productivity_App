@@ -69,6 +69,7 @@ class ListController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
+        /*
         //TO-DO: Fix bug that causes a crash when final item is deleted
         
         var youHaveData: Bool
@@ -100,30 +101,20 @@ class ListController: UITableViewController {
             //self.navigationItem.leftBarButtonItem = self.deleteBarButton
         }
         return numOfSections
-    
- 
-    
+         */
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.tasks.count
     }
-
+    
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell:UITableViewCell = self.tableView?.cellForRow(at: indexPath){
-            if cell.accessoryType == .checkmark {
-                cell.accessoryType = .none
-            } else {
-                cell.accessoryType = .checkmark
-            }
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
         
-        
-        //TO-DO: properly implement this
-        //ViewController()
     }
+    */
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jobList", for: indexPath)
@@ -134,8 +125,7 @@ class ListController: UITableViewController {
         }
         return cell
     }
-    
-
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

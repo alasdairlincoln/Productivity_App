@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jobList" textLabel="KZC-z5-iht" style="IBUITableViewCellStyleDefault" id="aXP-sM-pac">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="jobList" textLabel="KZC-z5-iht" style="IBUITableViewCellStyleDefault" id="aXP-sM-pac">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aXP-sM-pac" id="CGB-7m-yOo">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KZC-z5-iht">
-                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -33,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="kA9-FO-gs2" kind="push" id="IIp-cU-5j1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,6 +60,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC2-XU-mbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-355" y="-328"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1s8-CN-FZr">
+            <objects>
+                <viewController id="kA9-FO-gs2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FoS-st-dgY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="apq-bZ-t6o"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jiz-It-cp0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1c-Am-IVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v0s-Im-4jD">
