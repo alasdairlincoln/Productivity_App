@@ -15,7 +15,7 @@ class ListController: UITableViewController {
             }
         }
     }
-
+    
     @IBAction func editMode(_ sender: UIBarButtonItem) {
         self.isEditing = !self.isEditing
         if self.isEditing {
@@ -25,6 +25,7 @@ class ListController: UITableViewController {
         }
     }
     
+    /*
     @IBAction func addTask(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "New Task", message: "Type task below", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
@@ -44,7 +45,7 @@ class ListController: UITableViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    
+    */
     func saveList() {
         let savedItems = UserDefaults.standard
         savedItems.set(tasks, forKey: "items")
