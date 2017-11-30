@@ -1,20 +1,11 @@
 import Foundation
 
 /**
- A new structure for Task, takes title: String & text: String
-*/
-struct Task {
-    
-    var title: String
-    var text: String
-}
-
-/**
  Class to control list of tasks
 */
 public class Tasker {
-    
-    var tasks:[Task]
+
+    var tasks:[String]
     
     public static let sharedInstance = Tasker()
     
@@ -32,7 +23,7 @@ public class Tasker {
      - Returns: Nothing
      - Throws: Nothing
     */
-    func add(task: Task) {
+    func add(task: String) {
         self.tasks.append(task)
     }
     
@@ -46,7 +37,7 @@ public class Tasker {
      - Returns: The task at the specified index
      - Throws: Nothing
     */
-    func getTask(atIndex index: Int) -> Task {
+    func getTask(atIndex index: Int) -> String {
         return tasks[index]
     }
     
@@ -91,7 +82,7 @@ public class Tasker {
      - Returns: Nothing
      - Throws: Nothing
     */
-    func insert(task: Task, at index: Int) {
+    func insert(task: String, at index: Int) {
         self.tasks.insert(task, at: index)
     }
     
@@ -106,7 +97,7 @@ public class Tasker {
      - Returns: Nothing
      - Throws: Nothing
      */
-    func update(task: Task, at index: Int) {
+    func update(task: String, at index: Int) {
         self.remove(at: index)
         self.insert(task: task, at: index)
     }

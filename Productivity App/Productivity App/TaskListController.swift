@@ -3,13 +3,14 @@ import UIKit
 class TaskListController: UITableViewController {
 
     var tasks:[String] = []
+    let tasker = Tasker.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let savedItems = UserDefaults.standard
         if let loadedItems:[String] = savedItems.object(forKey: "tasks") as! [String]? {
-            self.tasks = loadedItems
+            tasker.tasks = loadedItems
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -18,7 +19,7 @@ class TaskListController: UITableViewController {
     
     func saveList() {
         let savedItems = UserDefaults.standard
-        savedItems.set(tasks, forKey: "tasks")
+        savedItems.set(tasker.tasks, forKey: "tasks")
         savedItems.synchronize()
     }
     
@@ -28,7 +29,7 @@ class TaskListController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action) in
             if let textFields = alert.textFields {
                 if let item = textFields[0].text {
-                    self.tasks.append(item)
+                    self.tasker.add(task: item)
                     DispatchQueue.main.async {
                         self.saveList()
                         self.tableView.reloadData()
@@ -90,14 +91,14 @@ class TaskListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks.count
+        return tasker.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath)
         
         if let lable = cell.textLabel {
-            lable.text = self.tasks[indexPath.row]
+            lable.text = tasker.tasks[indexPath.row]
             
         }
         return cell
@@ -105,16 +106,16 @@ class TaskListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.tasks.remove(at: indexPath.row)
+            tasker.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.saveList()
         }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let item:String = tasks[fromIndexPath.row]
-        self.tasks.remove(at: fromIndexPath.row)
-        tasks.insert(item, at: to.row)
+        let task:String = tasker.tasks[fromIndexPath.row]
+        tasker.remove(at: fromIndexPath.row)
+        tasker.insert(task: task, at: to.row)
         self.tableView.reloadData()
         self.saveList()
     }
