@@ -11,10 +11,10 @@
 		62DD57BC1FA4DF2500CF9A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BA1FA4DF2500CF9A16 /* Main.storyboard */; };
 		62DD57BE1FA4DF2500CF9A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BD1FA4DF2500CF9A16 /* Assets.xcassets */; };
 		62DD57C11FA4DF2500CF9A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD57BF1FA4DF2500CF9A16 /* LaunchScreen.storyboard */; };
-		62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD57E41FA4E2BD00CF9A16 /* ListController.swift */; };
 		D26C9C021FC0ABC200B51496 /* TaskMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C011FC0ABC200B51496 /* TaskMakerTests.swift */; };
 		D26C9C051FC0AC4F00B51496 /* Tasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C031FC0ABCC00B51496 /* Tasker.swift */; };
 		D26C9C061FC0AC5300B51496 /* Tasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26C9C031FC0ABCC00B51496 /* Tasker.swift */; };
+		D29C20041FCF605A00591514 /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29C20031FCF605A00591514 /* TaskListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +44,10 @@
 		62DD57C71FA4DF2500CF9A16 /* Productivity AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Productivity AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD57CD1FA4DF2500CF9A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD57D21FA4DF2500CF9A16 /* Productivity AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Productivity AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DD57E41FA4E2BD00CF9A16 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		D26C9C001FC0ABC100B51496 /* Productivity AppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Productivity AppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D26C9C011FC0ABC200B51496 /* TaskMakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMakerTests.swift; sourceTree = "<group>"; };
 		D26C9C031FC0ABCC00B51496 /* Tasker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasker.swift; sourceTree = "<group>"; };
+		D29C20031FCF605A00591514 /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 				62DD57BD1FA4DF2500CF9A16 /* Assets.xcassets */,
 				62DD57BF1FA4DF2500CF9A16 /* LaunchScreen.storyboard */,
 				62DD57C21FA4DF2500CF9A16 /* Info.plist */,
-				62DD57E41FA4E2BD00CF9A16 /* ListController.swift */,
 				D26C9C031FC0ABCC00B51496 /* Tasker.swift */,
+				D29C20031FCF605A00591514 /* TaskListController.swift */,
 			);
 			path = "Productivity App";
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 			files = (
 				D26C9C061FC0AC5300B51496 /* Tasker.swift in Sources */,
 				62DD57B71FA4DF2500CF9A16 /* AppDelegate.swift in Sources */,
-				62DD57E51FA4E2BD00CF9A16 /* ListController.swift in Sources */,
+				D29C20041FCF605A00591514 /* TaskListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
