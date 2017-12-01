@@ -8,30 +8,34 @@ class TaskListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         let savedItems = UserDefaults.standard
-        if let loadedItems:[String] = savedItems.object(forKey: "tasks") as! [String]? {
+        if let loadedItems:[Task] = savedItems.object(forKey: "tasks") as! [Task]? {
             tasker.tasks = loadedItems
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+ 
         }
+        */
     }
-    
+
+    /*
     func saveList() {
         let savedItems = UserDefaults.standard
         savedItems.set(tasker.tasks, forKey: "tasks")
         savedItems.synchronize()
     }
-    
+    */
     @IBAction func add(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "New Task", message: "Type task below", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action) in
             if let textFields = alert.textFields {
                 if let item = textFields[0].text {
-                    self.tasker.add(task: item)
+                    self.tasker.add(task: Task(title: item))
                     DispatchQueue.main.async {
-                        self.saveList()
+                        //self.saveList()
                         self.tableView.reloadData()
                     }
                 }
@@ -98,8 +102,8 @@ class TaskListController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath)
         
         if let lable = cell.textLabel {
-            lable.text = tasker.tasks[indexPath.row]
-            
+            let task1 = tasker.tasks[indexPath.row]
+            lable.text = task1.title
         }
         return cell
     }
@@ -108,16 +112,16 @@ class TaskListController: UITableViewController {
         if editingStyle == .delete {
             tasker.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            self.saveList()
+            //self.saveList()
         }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let task:String = tasker.tasks[fromIndexPath.row]
+        let task:Task = tasker.tasks[fromIndexPath.row]
         tasker.remove(at: fromIndexPath.row)
         tasker.insert(task: task, at: to.row)
         self.tableView.reloadData()
-        self.saveList()
+        //self.saveList()
     }
    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

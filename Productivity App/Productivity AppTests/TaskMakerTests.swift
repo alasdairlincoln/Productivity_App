@@ -3,6 +3,8 @@ import XCTest
 class TaskMakerTests: XCTestCase {
     
     let tasker = Tasker.sharedInstance
+    let HomeworkTask = Task(title: "Homework")
+    let CourseworkTask = Task(title: "Coursework")
     
     override func setUp() {
         super.setUp()
@@ -10,46 +12,46 @@ class TaskMakerTests: XCTestCase {
     }
     
     func testAddTask() {
-        tasker.add(task: "Homework")
-        let newTask: String = tasker.getTask(atIndex: 0)
-        XCTAssertEqual(newTask, "Homework")
+        tasker.add(task: HomeworkTask)
+        let newTask: Task = tasker.getTask(atIndex: 0)
+        XCTAssertEqual(newTask.title, "Homework")
     }
     
     func testGetTask() {
-        tasker.add(task: "Homework")
+        tasker.add(task: HomeworkTask)
         let newTask = tasker.getTask(atIndex: 0)
-        XCTAssertEqual(newTask, "Homework")
+        XCTAssertEqual(newTask.title, "Homework")
     }
     
     func testCountTasks() {
-        tasker.add(task: "Homework")
+        tasker.add(task: HomeworkTask)
         let tasksCount = tasker.count
         XCTAssertEqual(tasksCount, 1)
     }
     
     func testClearList() {
-        tasker.add(task: "Homework")
+        tasker.add(task: HomeworkTask)
         tasker.clearList()
         let tasksCount = tasker.count
         XCTAssertEqual(tasksCount, 0)
     }
     
     func testInsert() {
-        tasker.add(task: "Homework")
-        tasker.insert(task: "Coursework", at: 0)
+        tasker.add(task: HomeworkTask)
+        tasker.insert(task: CourseworkTask, at: 0)
         let newTask = tasker.getTask(atIndex: 0)
-        XCTAssertEqual(newTask, "Coursework")
+        XCTAssertEqual(newTask.title, "Coursework")
     }
     
     func testUpdate() {
-        tasker.add(task: "Homework")
-        tasker.update(task: "Coursework", at: 0)
+        tasker.add(task: HomeworkTask)
+        tasker.update(task: CourseworkTask, at: 0)
         let newTask = tasker.getTask(atIndex: 0)
-        XCTAssertEqual(newTask, "Coursework")
+        XCTAssertEqual(newTask.title, "Coursework")
     }
     
     func testRemove() {
-        tasker.add(task: "Homework")
+        tasker.add(task: HomeworkTask)
         tasker.remove(at: 0)
         let tasksCount = tasker.count
         XCTAssertEqual(tasksCount, 0)
